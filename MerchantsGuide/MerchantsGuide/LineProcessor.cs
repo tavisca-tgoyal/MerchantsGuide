@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace MerchantsGuide
 {
-    class LineProcessor
+    public class LineProcessor
     {
+        public static Dictionary<string, string> SlangWordMapping = new Dictionary<string, string>();
+        public void Execute(string str)
+        {
+            string[] splittedLine = str.Split(' ');
+            SlangWordMapping.Add(splittedLine[0], splittedLine[2]);
+
+        }
     }
 }
